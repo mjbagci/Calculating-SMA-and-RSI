@@ -11,7 +11,9 @@ with open("orcl_rsi.csv") as file:
 
 for data_point in historical_data:
     print(data_point)
-    
+"""
+-------------------------------------------------------------------------------------------------
+"""    
 # Task 2:
 def calculate_sma(data, window):
     sma_values = []
@@ -59,14 +61,15 @@ def calculate_rsi(data, window):
 
     return rsi_values
 
-# Calculating SMA and RSI values and printing them
 sma_values = calculate_sma(historical_data, window=5)
 rsi_values = calculate_rsi(historical_data, window=14)
 
 print("SMA Values are:", sma_values)
 print("RSI Values are:", rsi_values)
-
-# Task 3: Fixing the file writing operations
+"""
+--------------------------------------------------------------------------
+"""    
+# Task 3: 
 with open("orcl_rsi.csv", "w") as rsi_file:
     rsi_file.write("Date,RSI\n")
     for i in range(len(historical_data)):
