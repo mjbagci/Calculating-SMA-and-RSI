@@ -5,8 +5,6 @@ Kullanım
 1. Veri Yüklemek
 Proje, "orcl_rsi.csv" adlı bir dosyadan finansal verileri yükler. Bu dosyanın uygun formatta olduğundan emin olun.
 
-python
-Copy code
 # Task 1: Veri Yüklemek
 historical_data = []  
 
@@ -23,8 +21,6 @@ for data_point in historical_data:
 2. SMA ve RSI Hesaplamak
 Proje, finansal veriler üzerinde SMA ve RSI hesaplamak için iki fonksiyon içerir.
 
-python
-Copy code
 # Task 2: SMA ve RSI Hesaplamak
 def calculate_sma(data, window):
     # Fonksiyon içeriği
@@ -34,13 +30,13 @@ def calculate_rsi(data, window):
 3. Sonuçları Kaydetmek
 Proje, hesaplanan SMA ve RSI değerlerini "orcl_rsi.csv" adlı bir dosyaya kaydeder.
 
-python
-Copy code
 # Task 3: Dosya Yazma İşlemlerini Düzeltmek
 with open("orcl_rsi.csv", "w") as rsi_file:
     rsi_file.write("Date,RSI\n")
     for i in range(len(historical_data)):
         rsi_file.write(f"{historical_data[i]['Date']},{rsi_values[i]}\n")
+
+        
 Bağımlılıklar
 Projenin çalışabilmesi için şu bağımlılıklara ihtiyaç vardır:
 
