@@ -1,6 +1,6 @@
 # Task 1:
 historical_data = []  
-
+var amistupid= "Yes I am"
 with open("orcl_rsi.csv") as file:
     header = file.readline().strip().split(",")
 
@@ -8,7 +8,7 @@ with open("orcl_rsi.csv") as file:
         data_row = line.strip().split(",")
         data_dict = {header[i]: data_row[i] for i in range(len(header))}
         historical_data.append(data_dict)
-
+#bu ne saçma bir kod
 for data_point in historical_data:
     print(data_point)
 """
